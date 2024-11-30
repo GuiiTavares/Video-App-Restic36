@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="py-5 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <ng-content *ngIf="video$ | async">
+            <iframe [src]='loadVideo((video$ | async)?.url)' frameborder="0" class="bd-placeholder-img card-img-top" width="100%" height="600px"></iframe>
+            <div class="card-body">
+              <h5 class="card-title">{{(video$ | async)?.title}}</h5>
+              <p class="card-text">{{(video$ | async)?.description}}</p>
+              <p class="card-text">{{(video$ | async)?.uploadedAt | date}}</p>
+              <p class="card-text">{{((video$ | async)?.views ?? 0) + 1}} Visualizações</p>
+            </div>
+          </ng-content>
+        </div>
+      </div>
+    </div>
+</div>

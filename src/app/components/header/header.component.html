@@ -1,0 +1,28 @@
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center py-1">
+        
+        <a href="/dashboard" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img src="https://moodle.restic36.cepedi.org.br/pluginfile.php/1/theme_moove/logo/1732883945/Logo%20%2B%20texto.png" alt="" style="max-width: 150px;">
+        </a>
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
+          <div class="search"> <div class="row"> 
+              <div class="col-md-6"> 
+                <form>
+                 <div class="search-2">
+                    <input type="text" placeholder="Search..." aria-label="Search" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}"> 
+                    <button type="submit" (click)="onSearch()">Search</button> 
+                  </div> 
+                </form> 
+              </div> 
+            </div> 
+          </div>
+
+        <div class="text-end">
+            <button (click)="logOut()" type="button" class="btn btn-primary">Logout</button>
+        </div>
+        
+      </div>
+    </div>
+</header>
